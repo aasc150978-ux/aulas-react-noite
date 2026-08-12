@@ -9,6 +9,10 @@ class Aula04 extends Component {
         source={require('../assets/icon.png')} 
         style={styles.icon}
         />
+        <Image 
+        source={{uri:'https://media.gettyimages.com/id/2185386463/pt/foto/european-badger.jpg?s=1024x1024&w=gi&k=20&c=KXzaa2TSYstDUlmlDM488w-CzYyEA989uBlPKv8uJzM='}} 
+        style={styles.icon}
+        />
         
       </View>
     );
@@ -23,4 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  icon: {
+    width: 150,
+    height: 150,
+  }
 });
