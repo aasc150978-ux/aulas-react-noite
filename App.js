@@ -3,18 +3,20 @@
 //import Aula03 from './src/aula03';
 //import Aula04 from './src/aula04';
 //import Aula05 from "./src/aula05";
-import Aula05 from "./src/aula06";
+//import Aula06 from "./src/aula06";
+import aula07 from "./src/aula07";
 
 
 
 export default function App() {
   return (
-   //<Aula01 />
-   //<Aula02 />
-  //<Aula03 />
-  //<Aula04 />
-  // <Aula05 />
-  <Aula06/>
+  //<Aula01/>
+  //<Aula02/>
+  //<Aula03/>
+  //<Aula04/>
+  //<Aula05/>
+  //<Aula06/>
+  <aula07/>
   );
 }
 
