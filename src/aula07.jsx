@@ -8,7 +8,7 @@ class Aula07 extends Component {
     this.state = {
       textoDigitado:'',
     }
-    this.pegaTexto = this.pegaTexto.bing(this);
+    this.pegaTexto = this.pegaTexto.bind(this);
   }
 
   pegaTexto(texto) {
@@ -41,4 +41,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  input: {
+    borderWidth: 2,
+    padding: 10,
+    width: 300,
+    fonteSize: 30
+  },
+  texto: {
+    fontSize: 30,
+    color: 'red'
+  }
 });
