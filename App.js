@@ -7,7 +7,11 @@
 //import Aula07 from "./src/aula07";
 //import Aula08 from "./src/aula08";
 //import Aula09 from "./src/aula09";
-import Aula11 from "./src/aula11";
+//import Aula11 from "./src/aula11";
+//import Tela01 from "./src/tela01";
+//import Tela02 from "./src/tela02";
+import Tela03 from "./src/tela03";
+//import appTela01 from "./src/appTela01";
 
 
 
@@ -22,7 +26,11 @@ export default function App() {
   //<Aula07/>
   //<Aula08/>
   //<Aula09/>
-  <Aula11/>
+  //<Aula11/>
+  //<Tela01/>
+  //<Tela02/>
+  <Tela03/>
+  //<appTela01/>
   );
 }
 

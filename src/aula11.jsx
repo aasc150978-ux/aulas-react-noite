@@ -21,7 +21,7 @@ class Aula11 extends Component {
         return;
     }
 
-    const IP_DA_SUA_MAQUINA = 'https://192.168.0.139:3000';
+    const IP_DA_SUA_MAQUINA = 'http://192.168.0.207:3000';
 
     try {
         const response = await fetch(`${IP_DA_SUA_MAQUINA}/salvar` ,{
@@ -42,7 +42,7 @@ class Aula11 extends Component {
         }
 
     }catch(error){
-        ALert.alert('Erros', 'Não foi possivel conectar ao srvidor backend.')
+        Alert.alert('Erros', 'Não foi possivel conectar ao srvidor backend.')
 
     }
         
@@ -52,12 +52,12 @@ class Aula11 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text></Text>
+        <Text>çpmolkoijmklm</Text>
       </View>
     );
   }
 }
-w
+
 export default Aula11;
 const styles = StyleSheet.create({
   container: {
