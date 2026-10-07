@@ -1,168 +1,179 @@
 import React, { Component } from 'react';
-import { Checkbox } from 'expo-checkbox';
-import { 
-    View, 
-    Text, 
-    StyleSheet,
-    TextInput, 
-    Image, 
-    TouchableOpacity,
-    
-} from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
-class appTela01 extends Component {
+class Tela01 extends Component {
 
-  //Construtor - Forma tradicional de inicializar estado( dados)
   constructor(props) {
     super(props);
-
     this.state = {
-      nome: '',
       email: '',
-      password: '',
-    }
-
+      password: ''
+    };
   }
 
-
   render() {
+    const TAMANHO = 80;
     return (
-      
       <View style={styles.container}>
-        <View style={ styles.bloco01}>
+            <View style={ styles.bloco1}></View>
 
-        </View>
+            <View style={ styles.divisor }>
+                <Image 
+                    source={ require('../img/logo-barao.png')}
+                    style={[
+                        styles.imagem,
+                        {
+                            width: TAMANHO,
+                            height: TAMANHO,
+                            borderRadius: TAMANHO / 2,
+                            top: -(TAMANHO) / 2,
+                        }
+                    ]}
+                />
+            </View>
 
-        <View style={ styles.bloco01}>
+            <View style={ styles.bloco2}>
+                <Text style={ styles.welcomeText}>Bem-vindo!</Text>
+                <Text style={ styles.subText}>Acesse sua conta</Text>
 
-        </View>    
+                <TextInput
+                    style={styles.input}
+                    placeholder='E-mail'
+                    placeholderTextColor="#4caf50"
+                    keyboardType='email-address'
+                />
 
-        <View style={ styles.bloco01}>
+                <TextInput
+                    style={styles.input}
+                    placeholder='Senha'
+                    placeholderTextColor="#4caf50"
+                    keyboardType='password'
+                />
 
-        </View>
-        
+              <TouchableOpacity style={ styles.forgotPassword}>
+                <Text style={{ color: '#000', textDecorationLine:'underline'}}>Esqueci minha senha</Text>
+              </TouchableOpacity>
 
-        
-        <View>
+              <TouchableOpacity style={ styles.button}>
+                <Text style={ styles.buttonText}>Entrar</Text>
+              </TouchableOpacity>
 
-            <Text style={{fontSize: 50, color: '#39ff14', textAlign: 'center', fontWeight: 'bold'}}>LOGIN</Text>
-
-            <Image
-                source={require('../img/logo-barao.png')}
-                style={ styles.logo }
-            />
-
-        
-            <Text style={ styles.label }>Nome:</Text>
-            <TextInput
-            style={ styles.input }
-            placeholder='Informe seu nome:'   
-
-            />
-
-            <Text style={ styles.label }>Email:</Text>
-            <TextInput
-            style={ styles.input }
-            placeholder='Informe seu Email:'               
-           
-            /> 
-            
-            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                  <Checkbox
-                    value={ this.state.lembrarSenha}
-                    onValueChange={ (valor) => this.setState({lembrarSenha: valor})}
-                    color={ this.state.lembrarSenha ? '#4630EB': undefined}
-                  />
-                  <Text style={{color: 'white', marginLeft: 3, fontSize: 12}}>Lembrar senha</Text>
-              </View>
-              <Text style={{color: '#39ff14', fontSize: 12}}>Esqueceu a senha?</Text>
             </View>
             
-            
-                             
-            <TouchableOpacity style={ styles.botao }>
-                <text style={ styles.textoBotao }>Entrar</text>
-            </TouchableOpacity>
-            
-            <Text style={ styles.texto1}>Não tem conta?
-                <Text style={ styles.texto2}> Cadastrar-se! </Text>
-            </Text>    
+            <View style={ styles.bloco3}>
+              <Text style={ styles.footerText}>Não tem conta? </Text>
+              <TouchableOpacity>
+              <Text style={ styles.linkText}>Cadastre-se</Text>
+              </TouchableOpacity>
+              
+              
+              
 
-        </View>
-
+            </View>
       </View>
-
     );
   }
 }
 
-export default appTela01;
+export default  Tela01;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  bloco1: {
     backgroundColor: 'black',
+    width: '100%',
+    height: 50,
+  },
+
+  bloco2: {
+    flex: 1,
+    width: '80%',
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  bloco3: {     
+    height:50,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    
+  },
+
+  divisor: {
+    height: 0,
+    overflow: `visible`,
+    zIndex: 10
+  },
+
+  imagem: {
+    position: 'absolute',
+    alignSelf: 'center',
+    borderWidth: 3,
+    borderColor: '#fff',
+    backgroundColor: 'black'
+  },
+
+  welcomeText: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 5,
+    marginTop: 60,
+    textAlign: 'center'
+  },
+
+  subText: {
+    fontSize: 28,
+    color: '#555',
+    marginBottom: 30,
+    textAlign: 'center'
   },
 
 
   input: {
-    width: 250,
+    width:'100%',
     borderWidth: 1,
-    borderColor: '#ccc',
-    boderRadius: 5,
-    padding: 10,
+    borderColor: '#4caf50',
+    borderRadius: 8,
+    padding: 15,
     marginBottom: 15,
-    fontSize: 16, 
-    backgroundColor: 'white',
+    color: 'black'
   },
-
-  label: {
-    fontSize: 16,
-    marginBotton: 5,
-    color: 'white'
-    
-  },
-
-  logo: {
-    width: 120,
-    height: 120,
+  forgotPassword: {
     alignSelf: 'center',
-    marginBottom: 30,
-    
+    marginBottom: 30
   },
 
-  botao:{
-    backgroundColor: 'green',
-    width: 250,
-    padding: 10,
-    borderRaius: 5,
-    marginTop: 20,    
+  button: {
+    width: '100%', 
+    backgroundColor: '#4caf50',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 15,
+    alignItems: 'center',
   },
 
-  textoBotao: {
-    color: 'white',
-    textAlign: 'center',
+  buttonText:{
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold'
   },
 
-  texto1: {
-    color: 'white',
-    fontSize: 15,
-    marginTop: 6,
-    textAlign: 'center',   
-    
+  footerText: {
+    color: '#000',
   },
 
-  texto2: {
-    color: '#39ff14',
-    //marginRinght: 20,
-    fontSize: 15,
-    marginleft: 10,    
-    textAlign: 'center',
+  linkText: {
+    color: '#000',
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
+  }  
 
-  },
-
-  
 });
