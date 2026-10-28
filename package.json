@@ -1,5 +1,5 @@
 {
-  "name": "aulas-react-noite",
+  "name": "app-firebase-learn",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,17 +9,12 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "cors": "^2.8.6",
-    "expo": "~54.0.35",
-    "expo-checkbox": "~5.0.8",
-    "expo-status-bar": "~3.0.9",
-    "express": "^5.2.1",
-    "firebase": "^13.0.0",
-    "mysql": "^2.18.1",
-    "mysql2": "^3.24.5",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-native": "0.81.5",
+    "expo": "~55.0.32",
+    "expo-status-bar": "~55.0.6",
+    "firebase": "^13.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.10",
     "react-native-web": "^0.21.0"
   },
   "private": true

@@ -1,0 +1,26 @@
+1 - Criar o projeto com: npx creat-expo-app --template blank "nome-do-projeto"
+    OBS: rodar no terminal do vscode na pasta de preferencia
+
+2 - Excolher a versao 55 do sdk (setas pra cima e baixo)
+
+3 - Depois de criado o projeto, criar o banco de dados no firebase
+
+4 - depois de ter feito o passo a passo e registrado o app cole o primeiro comando do firebase: npm install firebase
+
+5 - copiar as configurações (script) do firebase para um arquivo jsx ( firebaseConnection.psx), ja dentro de uma pasta src
+
+6 - Adicionar a importacao:
+    import {getFirestore} from "firebase/firestore
+    no firebaseConnection.jsx
+    fazer o mesmo com os as duas linhas abaixo:
+
+    const db = getFirestore(app);
+
+    export default {db};
+
+7 - Rodar o comando (por garantia):
+
+    npx expo customize metro.config.js
+
+    e adicionar o script:
+    config.resolver.sourceExts('cjs'); abaixo do const config....    
